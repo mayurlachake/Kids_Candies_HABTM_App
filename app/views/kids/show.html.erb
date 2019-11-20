@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>First Name:</strong>
+  <%= @kid.fisrtname %>
+</p>
+
+<p>
+  <strong>Last Name:</strong>
+  <%= @kid.lastname %>
+</p>
+
+<p>
+  <strong>Age:</strong>
+  <%= @kid.age %>
+</p>
+
+<p>
+  <strong>Candies:</strong>
+  <%= @kid.candies.map {|c| c.name}.join(', ') %>
+</p>
+
+<%= link_to 'Edit', edit_kid_path(@kid) %> |
+<%= link_to 'Back', kids_path %>
